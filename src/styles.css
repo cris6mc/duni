@@ -1,0 +1,152 @@
+@import 'tailwindcss';
+
+:root {
+  /* Colegios D' UNI Brand Palette */
+  --duni-red: #C8232A;
+  --duni-red-dark: #A31B21;
+  --duni-red-light: #EE3840;
+  --duni-bronze: #B85C14;
+  --duni-bronze-light: #D97706;
+  --duni-dark: #0F172A;
+  --duni-gray: #475569;
+  --duni-light: #FAF9F5;
+
+  --font-outfit: 'Outfit', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #FAF9F5;
+  color: #0F172A;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-heading {
+  font-family: var(--font-outfit);
+}
+
+/* Custom Utilities */
+.bg-duni-red {
+  background-color: var(--duni-red);
+}
+
+.bg-duni-red-dark {
+  background-color: var(--duni-red-dark);
+}
+
+.bg-duni-bronze {
+  background-color: var(--duni-bronze);
+}
+
+.bg-duni-dark {
+  background-color: var(--duni-dark);
+}
+
+.bg-duni-light {
+  background-color: var(--duni-light);
+}
+
+.text-duni-red {
+  color: var(--duni-red);
+}
+
+.text-duni-red-dark {
+  color: var(--duni-red-dark);
+}
+
+.text-duni-bronze {
+  color: var(--duni-bronze);
+}
+
+.text-duni-dark {
+  color: var(--duni-dark);
+}
+
+.border-duni-red {
+  border-color: var(--duni-red);
+}
+
+.border-duni-bronze {
+  border-color: var(--duni-bronze);
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(241, 245, 249, 0.9);
+}
+
+.glass-card-dark {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Animations */
+@keyframes floatSlow {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--duni-red);
+}

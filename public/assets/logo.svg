@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 160" width="100%" height="100%">
+  <defs>
+    <linearGradient id="duniGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C26D20" />
+      <stop offset="60%" stop-color="#C8232A" />
+      <stop offset="100%" stop-color="#9E0C13" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon: Stylized Book "D" -->
+  <g transform="translate(140, 15)">
+    <!-- Outer Crimson D Shell -->
+    <path d="M 0 0 L 60 0 C 95 0, 120 20, 120 50 C 120 80, 95 100, 60 100 L 0 100 Z M 12 12 L 12 88 L 60 88 C 88 88, 108 72, 108 50 C 108 28, 88 12, 60 12 Z" fill="#C8232A" />
+    
+    <!-- Horizontal Book Page Lines -->
+    <line x1="16" y1="23" x2="68" y2="23" stroke="#C26D20" stroke-width="5" stroke-linecap="round" />
+    <line x1="16" y1="34" x2="78" y2="34" stroke="#C8521A" stroke-width="5" stroke-linecap="round" />
+    <line x1="16" y1="45" x2="84" y2="45" stroke="#C83820" stroke-width="5" stroke-linecap="round" />
+    <line x1="16" y1="56" x2="84" y2="56" stroke="#C8232A" stroke-width="5" stroke-linecap="round" />
+    <line x1="16" y1="67" x2="78" y2="67" stroke="#C8232A" stroke-width="5" stroke-linecap="round" />
+    <line x1="16" y1="77" x2="68" y2="77" stroke="#C8232A" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(50, 142)">
+    <!-- "Colegios" in bronze/terracotta -->
+    <text x="0" y="0" font-family="'Outfit', 'Inter', system-ui, sans-serif" font-weight="300" font-size="34" fill="#B85C14" letter-spacing="0.5">Colegios</text>
+    
+    <!-- "D' UNI" in bold crimson red -->
+    <text x="145" y="0" font-family="'Outfit', 'Inter', system-ui, sans-serif" font-weight="800" font-size="38" fill="#C8232A" letter-spacing="1.5">D’ UNI</text>
+  </g>
+</svg>
