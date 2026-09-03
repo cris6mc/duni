@@ -47,7 +47,7 @@ export class App {
   // Filter signals
   readonly activeNewsCategory = signal<'todas' | 'concursos' | 'eventos' | 'academico'>('todas');
   readonly selectedNovedad = signal<Novedad | null>(null);
-  
+
   // Selection signals
   readonly activeSedeId = signal<string>('central');
   readonly activeNivelId = signal<'inicial' | 'primaria' | 'secundaria'>('primaria');
@@ -69,33 +69,33 @@ export class App {
       id: 1,
       category: 'concursos',
       categoryName: 'Concurso de Excelencia',
-      title: 'Ganadores del Concurso Nacional de Matemática D\' UNI 2026',
+      title: 'Ganadores del Concurso Nacional 2026',
       date: '15 de Agosto, 2026',
       summary: 'Nuestros estudiantes lograron los primeros puestos y medallas de oro en las categorías de primaria y secundaria a nivel regional.',
       fullContent: 'El certamen académico reunió a más de 500 alumnos de las mejores instituciones educativas. El equipo de Colegios D\' UNI obtuvo el primer lugar institucional en cálculo, razonamiento lógico y resolución de problemas avanzados. Felicitamos a nuestros talentosos estudiantes y docentes asesores.',
-      image: 'assets/novedades/concurso-matematica.jpg',
+      image: 'assets/novedades/campeon-2026.jpeg',
       badgeColor: 'bg-red-600 text-white'
     },
     {
       id: 2,
       category: 'eventos',
-      categoryName: 'Feria Tecnológica',
-      title: 'Feria de Ciencias & Proyectos de Robótica Autónoma',
+      categoryName: 'Ingresantes UNCP 2026',
+      title: 'Nuestros alumnos ingresantes a la UNCP 2026',
       date: '22 de Agosto, 2026',
-      summary: 'Exposición de proyectos científicos innovadores, programación e inteligencia artificial desarrollados por nuestros alumnos.',
-      fullContent: 'Toda la comunidad educativa disfrutó de experimentos interactivos, proyectos de física aplicada y robótica autónoma. Destacaron los prototipos de exploración ambiental y automatización inteligente.',
-      image: 'assets/novedades/feria-ciencias.jpg',
+      summary: 'El primer nivel de exigencia inicia en casa y tiene su culminación en la Universidad Nacional del Centro del Perú.',
+      fullContent: 'Desde el área de producción y asesoría académica, nuestros exalumnos de los niveles de primaria y secundaria lograron sus ingresos a la UNCP. Los resultados obtenidos reflejan el compromiso, disciplina y alto nivel de preparación que reciben nuestros estudiantes.',
+      image: 'assets/novedades/ingresante-uncp.jpeg',
       badgeColor: 'bg-amber-600 text-white'
     },
     {
       id: 3,
       category: 'academico',
-      categoryName: 'Innovación Pedagógica',
-      title: 'Aulas Digitales Interactivas y Metodología STEM en las 3 Sedes',
+      categoryName: 'Deporte',
+      title: 'Nuestros alumnos destacaron en los juegos deportivos 2026',
       date: '28 de Agosto, 2026',
-      summary: 'Implementación de pantallas táctiles interactiva y laboratorios STEM para enriquecer la experiencia de aprendizaje diario.',
-      fullContent: 'Para mantener la vanguardia educativa, Colegios D\' UNI ha equipado sus aulas en las 3 sedes con pantallas interactivas de última generación, permitiendo un aprendizaje dinámico y colaborativo en Inicial, Primaria y Secundaria.',
-      image: 'assets/novedades/taller-innovacion.jpg',
+      summary: 'Selección de futsal y vóley alcanzó el primer lugar en la Copa Interdistrital.',
+      fullContent: 'Los equipos de futsal y vóley de secundaria demostraron gran destreza y espíritu deportivo, obteniendo el campeonato en sus respectivas categorías. Los encuentros se realizaron en el Polideportivo de Chilca, donde nuestros alumnos compitieron con dedication y lograron importantes victorias.',
+      image: 'assets/novedades/premio-deportes.jpeg',
       badgeColor: 'bg-emerald-600 text-white'
     }
   ]);
@@ -112,8 +112,20 @@ export class App {
   // 3 Sedes List
   readonly sedes = signal<Sede[]>([
     {
-      id: 'central',
-      name: 'Sede Central',
+      id: 'la punta',
+      name: 'Sede La Punta',
+      subtitle: 'Campus Innovación & Desarrollo Integral',
+      address: 'Av. Mariscal Castilla 1230, La Punta',
+      phone: '(064) 248-910 / +51 976 543 210',
+      hours: 'Lun - Vie: 7:30 AM - 5:00 PM',
+      levels: ['Inicial', 'Primaria'],
+      features: ['Zona de Psicomotricidad Equipada', 'Área Verde y Huerto Ecológico', 'Taller de Arte, Danza y Música', 'Campo Deportivo con Césped Sintético'],
+      image: 'assets/sedes/sede-punta.jpeg',
+      mapQuery: 'Av Mariscal Castilla La Punta Huancayo'
+    },
+    {
+      id: 'huancayo',
+      name: 'Sede Huancayo',
       subtitle: 'Campus Principal & Alta Exigencia Académica',
       address: 'Av. Giráldez 450, Huancayo (Frente al Parque Constitución)',
       phone: '(064) 251-480 / +51 984 123 456',
@@ -122,18 +134,6 @@ export class App {
       features: ['Aulas Digitales e Interactivas', 'Laboratorio de Ciencias Avanzado', 'Biblioteca y Sala de Cómputo', 'Auditorio Institucional'],
       image: 'assets/sedes/sede-central.jpg',
       mapQuery: 'Av Giraldez 450 Huancayo'
-    },
-    {
-      id: 'tambo',
-      name: 'Sede El Tambo',
-      subtitle: 'Campus Innovación & Desarrollo Integral',
-      address: 'Av. Mariscal Castilla 1230, El Tambo',
-      phone: '(064) 248-910 / +51 976 543 210',
-      hours: 'Lun - Vie: 7:30 AM - 5:00 PM',
-      levels: ['Inicial', 'Primaria'],
-      features: ['Zona de Psicomotricidad Equipada', 'Área Verde y Huerto Ecológico', 'Taller de Arte, Danza y Música', 'Campo Deportivo con Césped Sintético'],
-      image: 'assets/sedes/sede-tambo.jpg',
-      mapQuery: 'Av Mariscal Castilla El Tambo Huancayo'
     },
     {
       id: 'chilca',
